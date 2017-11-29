@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.daviddonovan.dutytogod.DeaconCreateProjectRequirement">
+
+    <!-- Requirement Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Project"
+        android:id="@+id/title"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"/>
+
+    <!-- Learn Title -->
+    <TextView
+        android:id="@+id/Learn"
+        android:text="LEARN"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop= "8dp"
+        android:layout_marginLeft="20dp"/>
+
+
+    <!-- Learn Text -->
+    <TextView
+        android:id="@+id/LearnText"
+        android:text="Learn Text"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Learn"
+        android:layout_marginTop= "10dp"
+        android:layout_marginLeft="20dp"/>
+
+
+
+    <!-- Act Title -->
+    <TextView
+        android:id="@+id/learn"
+        android:text="ACT"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LearnText"
+        android:layout_marginTop= "8dp"
+        android:layout_marginLeft="20dp"/>
+
+    <!-- Act Text -->
+    <TextView
+        android:id="@+id/ActText"
+        android:text="Act Text"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/learn"
+        android:layout_marginTop= "10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <!-- Share Title -->
+    <TextView
+        android:id="@+id/Share"
+        android:text="SHARE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ActText"
+        android:layout_marginTop= "8dp"
+        android:layout_marginLeft="20dp"/>
+
+    <!-- Share Text -->
+    <TextView
+        android:id="@+id/ShareText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Share"
+        android:layout_alignStart="@+id/Share"
+        android:layout_below="@+id/Share"
+        android:layout_marginTop="27dp"
+        android:text="Share Text"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/markComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ShareText"
+        android:layout_marginTop="53dp"
+        android:layout_toEndOf="@+id/Share"
+        android:layout_toRightOf="@+id/Share"
+        android:onClick="updateComplete"
+        android:text="Mark Activity as Complete" />
+
+
+
+</RelativeLayout>
+

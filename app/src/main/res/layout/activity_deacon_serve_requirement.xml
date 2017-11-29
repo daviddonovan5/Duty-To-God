@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.daviddonovan.dutytogod.DeaconServeRequirement">
+
+    <!-- Requirement Title -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText9"
+                android:layout_alignStart="@+id/editText9"
+                android:layout_below="@+id/textView12"
+                android:text="Share with a parent or quorum members some of your experiences serving others. For example, you could talk about how your service has affected you and the people you have served."
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHARE"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/editText9"
+                android:layout_alignRight="@+id/Learn"
+                android:layout_alignEnd="@+id/Learn" />
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:hint="..."
+                android:textSize="12sp"
+                android:layout_below="@+id/textView10"
+                android:layout_alignLeft="@+id/textView10"
+                android:layout_alignStart="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText7"
+                android:layout_alignStart="@+id/editText7"
+                android:layout_below="@+id/editText7"
+                android:text="My personal plan to give service: "
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignLeft="@+id/ActText"
+                android:layout_alignStart="@+id/ActText"
+                android:layout_below="@+id/ActText"
+                android:hint="..."
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Serve Others"
+                android:id="@+id/title"
+                android:textSize="30sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"/>
+
+            <!-- Learn Title -->
+            <TextView
+                android:id="@+id/Learn"
+                android:text="LEARN"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_alignLeft="@+id/LearnText"
+                android:layout_alignStart="@+id/LearnText" />
+
+
+            <!-- Learn Text -->
+            <TextView
+                android:id="@+id/LearnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Learn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="▪ Write down what you learn about serving others from the following scriptures: James 1:27, Mosiah 2:17, and Mosiah 18:8–10. Talk with a parent or quorum leader about the relationship between being a priesthood holder and serving others
+▪ Discuss with members of your quorum the opportunities you have to serve others (ask your bishop or quorum leaders for ideas). As an Aaronic Priesthood holder, you serve others by assisting your bishop or branch president in “administering . . . temporal things” (D&amp;C 107:68). This may include caring for the poor and needy, cleaning the meetinghouse and grounds, gathering fast offerings, and fulfilling assignments from your quorum president. It could also include service projects you decide to do on your own
+▪ List some specific things your quorum will do to give service. Also plan several things you will do on your own to give service, including service to members of your family"
+                android:textSize="12sp" />
+
+
+
+            <!-- Act Title -->
+            <TextView
+                android:id="@+id/learn"
+                android:text="ACT"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LearnText"
+                android:layout_marginTop= "8dp"
+                android:layout_marginLeft="20dp"/>
+
+            <!-- Act Text -->
+            <TextView
+                android:id="@+id/ActText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/learn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="My quorum’s plan to give service:"
+                android:textSize="12sp" />
+
+            <!-- Share Title -->
+
+            <!-- Share Text -->
+
+            <Button
+                android:id="@+id/markComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView15"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="80dp"
+                android:text="Mark Activity as Complete"
+                android:onClick="updateComplete"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

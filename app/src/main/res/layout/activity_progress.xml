@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.daviddonovan.dutytogod.Progress">
+
+    <!-- Deacon Progress Title -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Deacon Progress"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <!-- Spiritual Strength Title -->
+            <TextView
+                android:id="@+id/SpiritualStrength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:text="Spiritual Strength"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Pray and Study requirement-->
+            <Button
+                android:id="@+id/Pray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/SpiritualStrength"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:onClick="getPray"
+                android:text="Pray and Study the Scriptures "
+                android:textSize="15sp" />
+
+
+            <!-- Live Worthily requirement-->
+            <Button
+                android:id="@+id/Worthily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Pray"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:onClick="getWorthily"
+                android:text="Live Worthily"
+                android:textSize="15sp" />
+
+            <!-- Understand Doctrine requirement-->
+            <Button
+                android:id="@+id/Doctrine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Worthily"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:onClick="getDoctrine"
+                android:text="Understand Doctrine"
+                android:textSize="15sp" />
+
+            <!-- Priesthood Duties Title -->
+            <TextView
+                android:id="@+id/PriesthoodDuties"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Doctrine"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:text="Priesthood Duties"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Administer Priesthood requirement-->
+            <Button
+                android:id="@+id/Administer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PriesthoodDuties"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:onClick="getAdminister"
+                android:text="Administer Priesthood Ordinances"
+                android:textSize="15sp" />
+
+            <!-- Serve Others requirement-->
+            <Button
+                android:id="@+id/Serve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Administer"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:onClick="getServe"
+                android:text="Serve Others "
+                android:textSize="15sp" />
+
+            <!-- Invite all to come unto Christ requirement-->
+            <Button
+                android:id="@+id/Invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Serve"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:onClick="getInvite"
+                android:text="Invite all to come unto Christ"
+                android:textSize="15sp" />
+
+            <!-- Physical Health Title -->
+            <TextView
+                android:id="@+id/PhysicalHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Invite"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:text="Physical Health"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <!-- Create Project requirement-->
+            <Button
+                android:id="@+id/CreateProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PhysicalHealth"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="2dp"
+                android:onClick="getCreateProject"
+                android:text="Create Project"
+                android:textSize="15sp" />
+
+            <!-- Project requirement-->
+            <Button
+                android:id="@+id/Project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CreateProject"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="7dp"
+                android:onClick="getProject"
+                android:text="Project"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/worthilyProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/Worthily"
+                android:layout_marginBottom="30dp"
+
+                android:progress="25" />
+
+            <RadioButton
+                android:id="@+id/prayProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/worthilyProgress"
+                android:layout_alignEnd="@+id/worthilyProgress"
+                android:layout_alignRight="@+id/worthilyProgress"
+                android:progress="25" />
+
+            <RadioButton
+                android:id="@+id/doctrineProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/Doctrine"
+                android:progress="25" />
+
+            <RadioButton
+                android:id="@+id/administerProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/doctrineProgress"
+                android:layout_alignRight="@+id/doctrineProgress"
+                android:layout_alignTop="@+id/Administer" />
+
+            <RadioButton
+                android:id="@+id/serveProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/administerProgress"
+                android:layout_alignRight="@+id/administerProgress"
+                android:layout_alignTop="@+id/Serve" />
+
+            <RadioButton
+                android:id="@+id/inviteProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/Invite" />
+
+            <RadioButton
+                android:id="@+id/createProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/PhysicalHealth" />
+
+            <RadioButton
+                android:id="@+id/projectProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/Project" />
+
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Logout" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

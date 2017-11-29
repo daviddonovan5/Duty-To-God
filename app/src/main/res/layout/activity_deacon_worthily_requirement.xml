@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.daviddonovan.dutytogod.DeaconWorthilyRequirement">
+
+    <!-- Requirement Title -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Live Worthily"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <!-- Learn Title -->
+            <TextView
+                android:id="@+id/Learn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:text="LEARN"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <!-- Learn Text -->
+            <TextView
+                android:id="@+id/LearnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Learn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Read the section titled “Repentance” in For the Strength of Youth, and write your answers to the following questions in a notebook or journal:
+                1. What do you learn about the Atonement and repentance from this section?
+                2. How does repentance help you grow spiritually?
+                3. What is the relationship between repentance, the Atonement, and personal worthiness?
+                Discuss your answers with your parents or quorum members. Discuss how repentance will help you prepare to enter the temple and participate in sacred ordinances.
+           ▪ Choose at least three other sections from For the Strength of Youth that will help you live worthily. Study the standards in these sections, and write what you will do to live these standards and to help others do the same."
+                android:textSize="20sp" />
+
+
+            <!-- Act Title -->
+            <TextView
+                android:id="@+id/learn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LearnText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:text="ACT"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Act Text -->
+            <TextView
+                android:id="@+id/ActText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/learn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Sections from For the Strength of Youth I will study:
+
+                Specific things I will do to live these standards and help others do the same: "
+                android:textSize="20sp" />
+
+            <!-- Share Title -->
+            <TextView
+                android:id="@+id/Share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ActText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:text="SHARE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Share Text -->
+            <TextView
+                android:id="@+id/ShareText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Share"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="After studying and applying these standards, share with your parents or quorum members what you are learning, how it is infl uencing your life, and the kind of person you are becoming."
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/markComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ShareText"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="80dp"
+                android:text="Mark Activity as Complete"
+                android:onClick="updateComplete"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

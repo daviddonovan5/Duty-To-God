@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
     <LinearLayout
         android:layout_centerVertical="true"
@@ -16,11 +16,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="New User"
+            android:text="User Login"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal" />
+
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -28,7 +29,7 @@
             android:inputType="textEmailAddress" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -36,22 +37,20 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/buttonSignin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:text="Signup" />
-        
-        <TextView
 
+        <TextView
+            android:text="Need an account? Signup Here"
+            android:id="@+id/textSignUp"
             android:textAlignment="center"
-            android:text="already registered? click here"
-            android:id="@+id/textViewSignIn"
+            android:layout_margin="15dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
 </RelativeLayout>
-

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.daviddonovan.dutytogod.DeaconAdministerRequirement">
+
+    <!-- Requirement Title -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView8"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_below="@+id/textView8"
+                android:text="▪ After following through with your plan, discuss with members of your quorum how your experiences with the sacrament have helped you become more reverent."
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText3"
+                android:layout_alignStart="@+id/editText3"
+                android:layout_below="@+id/editText3"
+                android:text="What I will do to have a more meaningful experience when I partake of the sacrament:"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_alignStart="@+id/textView3"
+                android:layout_below="@+id/textView3"
+                android:hint="..."
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="Administer Priesthood Ordinances"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <!-- Learn Title -->
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText5"
+                android:layout_alignStart="@+id/editText5"
+                android:layout_below="@+id/editText5"
+                android:text="SHARE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Learn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/learn"
+                android:layout_alignStart="@+id/learn"
+                android:layout_below="@+id/title"
+                android:text="LEARN"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <!-- Learn Text -->
+            <TextView
+                android:id="@+id/LearnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Learn"
+                android:layout_alignStart="@+id/Learn"
+                android:layout_below="@+id/Learn"
+                android:text="▪ Read Doctrine and Covenants 20:76–79. What do the sacramental bread and water represent? Read Luke 22:19–20 and 3 Nephi 18:1–11. Whom do you represent when you pass the sacrament?
+▪ Ask your parents or your quorum leaders the following questions, and write their answers:
+    1. What does the ordinance of the sacrament mean to you?
+    2. What can I do as a deacon to help you have a meaningful
+       experience with the sacrament?
+▪ After counseling with your quorum, write on the next page what you will do to pass the sacrament in a way that shows reverence for the Savior and His Atonement and encourages others to show the same reverence. Also write what you will do to have a more meaningful experience when you partake of the sacrament."
+                android:textSize="12sp" />
+
+
+            <!-- Act Title -->
+            <TextView
+                android:id="@+id/learn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LearnText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:text="ACT"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Act Text -->
+            <TextView
+                android:id="@+id/ActText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/learn"
+                android:layout_alignStart="@+id/learn"
+                android:layout_below="@+id/learn"
+                android:text="Several things I will do to show reverence when I pass the sacrament and to encourage others to show the same reverence:"
+                android:textSize="12sp" />
+
+            <!-- Share Title -->
+
+            <!-- Share Text -->
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignLeft="@+id/ActText"
+                android:layout_alignStart="@+id/ActText"
+                android:layout_below="@+id/ActText"
+                android:hint="..."
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/markComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView9"
+                android:layout_marginLeft="137dp"
+                android:layout_marginStart="137dp"
+                android:text="Mark Activity as Complete"
+                android:onClick="updateComplete"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
