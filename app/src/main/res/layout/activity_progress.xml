@@ -168,9 +168,11 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/Worthily"
-                android:layout_marginBottom="30dp"
 
+                android:layout_alignBaseline="@+id/Worthily"
+                android:layout_alignBottom="@+id/Worthily"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:progress="25" />
 
             <RadioButton
@@ -178,9 +180,10 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/worthilyProgress"
-                android:layout_alignEnd="@+id/worthilyProgress"
-                android:layout_alignRight="@+id/worthilyProgress"
+                android:layout_alignBaseline="@+id/Pray"
+                android:layout_alignBottom="@+id/Pray"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:progress="25" />
 
             <RadioButton
@@ -188,9 +191,10 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/Doctrine"
+                android:layout_alignBottom="@+id/Doctrine"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/Doctrine"
                 android:progress="25" />
 
             <RadioButton
@@ -198,18 +202,20 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/doctrineProgress"
-                android:layout_alignRight="@+id/doctrineProgress"
-                android:layout_alignTop="@+id/Administer" />
+                android:layout_alignBaseline="@+id/Administer"
+                android:layout_alignBottom="@+id/Administer"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <RadioButton
                 android:id="@+id/serveProgress"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/administerProgress"
-                android:layout_alignRight="@+id/administerProgress"
-                android:layout_alignTop="@+id/Serve" />
+                android:layout_alignBaseline="@+id/Serve"
+                android:layout_alignBottom="@+id/Serve"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
             <RadioButton
                 android:id="@+id/inviteProgress"
@@ -225,26 +231,28 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/CreateProject"
+                android:layout_alignBottom="@+id/CreateProject"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/PhysicalHealth" />
+                android:layout_alignParentStart="true" />
 
             <RadioButton
                 android:id="@+id/projectProgress"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/Project"
+                android:layout_alignBottom="@+id/Project"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/Project" />
+                android:layout_alignParentStart="true" />
 
             <Button
                 android:id="@+id/buttonLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_gravity="center_horizontal"
+                android:onClick="logout"
                 android:text="Logout" />
 
 

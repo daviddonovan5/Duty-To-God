@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -80,7 +81,7 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     protected void onStart() {
         super.onStart();
         Log.d("progress", "onStart");
-        if (ref.child("users").child(user) == null) {
+        if (false) {
             writeUserInformation();
         }
 
@@ -287,7 +288,16 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             firebaseAuth.signOut();
             finish();
 
+
+
             //starting login activity
             startActivity(new Intent(this, MainActivity.class));}
+    }
+
+    public void logout(View view) {
+        firebaseAuth.signOut();
+        finish();
+
+        startActivity(new Intent(this, Login.class));
     }
 }
