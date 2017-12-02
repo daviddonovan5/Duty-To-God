@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -11,10 +12,16 @@ public class DeaconInviteRequirement extends AppCompatActivity implements Requir
 
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
     String user = "Avery";
+    private FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deacon_invite_requirement);
+
+
+        //initializing firebase authentication object
+        firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getUid();
     }
 
     boolean complete;

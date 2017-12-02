@@ -29,19 +29,15 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     RadioButton serveButton;
     RadioButton worthilyButton;
     Button logout;
+    String user = "Default";
 
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-    DatabaseReference prayRef  = ref.child("users").child("Avery").child("requirements").child("prayRequirement");
-    DatabaseReference administerRef  = ref.child("users").child("Avery").child("requirements").child("administerRequirement");
-    DatabaseReference createRef  = ref.child("users").child("Avery").child("requirements").child("createRequirement");
-    DatabaseReference doctrineRef  = ref.child("users").child("Avery").child("requirements").child("doctrineRequirement");
-    DatabaseReference inviteRef  = ref.child("users").child("Avery").child("requirements").child("inviteRequirement");
-    DatabaseReference projectRef  = ref.child("users").child("Avery").child("requirements").child("projectRequirement");
-    DatabaseReference serveRef  = ref.child("users").child("Avery").child("requirements").child("serveRequirement");
-    DatabaseReference worthilyRef  = ref.child("users").child("Avery").child("requirements").child("worthilyRequirement");
+
+
+
 
     private FirebaseAuth firebaseAuth;
-    String user = "Avery";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +64,7 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             //starting login activity
             startActivity(new Intent(this, Login.class));
 
-            FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+
             logout.setOnClickListener(this);
         }
 
@@ -81,29 +77,48 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     protected void onStart() {
         super.onStart();
         Log.d("progress", "onStart");
-        if (false) {
-            writeUserInformation();
-        }
+        user = firebaseAuth.getUid();
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.child("users").hasChild(user)){
+                    //user is created
+                }
+                else{
+                    writeUserInformation();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+        DatabaseReference prayRef  = ref.child("users").child(user).child("requirements").child("prayRequirement");
 
         prayRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 String progress = dataSnapshot.getValue(String.class);
-                if (progress == "true") {
-                    prayButton.setChecked(true); }
+                if (progress.matches("true")) {
+                    prayButton.setChecked(true);}
                 else {
-                    prayButton.setChecked(false);}
+                    prayButton.setChecked(false);
+                }
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
         });
 
-
+        DatabaseReference administerRef  = ref.child("users").child(user).child("requirements").child("administerRequirement");
         administerRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
-                if (progress == "true") {
+                if (progress.matches("true")) {
                     administerButton.setChecked(true); }
                 else {
                     administerButton.setChecked(false);}
@@ -112,12 +127,12 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onCancelled(DatabaseError databaseError) { }
         });
 
-
+        DatabaseReference createRef  = ref.child("users").child(user).child("requirements").child("createRequirement");
         createRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
-                if (progress == "true") {
+                if (progress.matches("true")) {
                     createButton.setChecked(true); }
                 else {
                     createButton.setChecked(false);}
@@ -126,11 +141,14 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onCancelled(DatabaseError databaseError) { }
         });
 
+
+        DatabaseReference doctrineRef  = ref.child("users").child(user).child("requirements").child("doctrineRequirement");
+
         doctrineRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
-                if (progress == "true") {
+                if (progress.matches("true")) {
                     doctrineButton.setChecked(true); }
                 else {
                     doctrineButton.setChecked(false);}
@@ -140,11 +158,12 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
         });
 
 
+        DatabaseReference inviteRef  = ref.child("users").child(user).child("requirements").child("inviteRequirement");
         inviteRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
-                if (progress == "true") {
+                if (progress.matches("true")) {
                     inviteButton.setChecked(true); }
                 else {
                     inviteButton.setChecked(false);}
@@ -154,11 +173,15 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
         });
 
 
+        DatabaseReference projectRef  = ref.child("users").child(user).child("requirements").child("projectRequirement");
+        DatabaseReference serveRef  = ref.child("users").child(user).child("requirements").child("serveRequirement");
+        DatabaseReference worthilyRef  = ref.child("users").child(user).child("requirements").child("worthilyRequirement");
+
         projectRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
-                if (progress == "true") {
+                if (progress.matches("true")) {
                     projectButton.setChecked(true); }
                 else {
                     projectButton.setChecked(false);}
@@ -172,7 +195,7 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
-                if (progress == "true") {
+                if (progress.matches("true")) {
                     serveButton.setChecked(true); }
                 else {
                     serveButton.setChecked(false);}
@@ -186,7 +209,7 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
-                if (progress == "true") {
+                if (progress.matches("true")) {
                     worthilyButton.setChecked(true); }
                 else {
                     worthilyButton.setChecked(false);}
