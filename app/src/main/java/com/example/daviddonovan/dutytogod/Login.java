@@ -46,12 +46,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         //if the objects getcurrentuser method is not null
         //means user is already logged in
-        if(firebaseAuth.getCurrentUser() != null){
+        //if(firebaseAuth.getCurrentUser() != null){
             //close this activity
-            finish();
+        //    finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(), Progress.class));
-        }
+          //  startActivity(new Intent(getApplicationContext(), Progress.class));
+       // }
 
         //initializing views
         editTextEmail = (EditText) findViewById(R.id.editEmail);
@@ -99,7 +99,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         if(task.isSuccessful()){
                             //start the profile activity
                             finish();
+
                             startActivity(new Intent(getApplicationContext(), Progress.class));
+
+                            // get usertype from database
+                            // if user is young man send to progress screen
+                            // else send to EnterEmail activity
+
                     }
 
 
