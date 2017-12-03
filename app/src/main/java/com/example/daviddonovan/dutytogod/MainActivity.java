@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //initializing firebase auth object
         firebaseAuth = FirebaseAuth.getInstance();
-
+/* This still works I am just testing createing a leader - avery
         if(firebaseAuth.getCurrentUser() != null){
             //close this activity
             finish();
             //opening profile activity
             startActivity(new Intent(getApplicationContext(), Progress.class));
         }
-
+*/
         //initializing views
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(MainActivity.this,"Successfully registered",Toast.LENGTH_LONG).show();
 
                                 finish();
-                                startActivity(new Intent(getApplicationContext(), Progress.class));
+                                startActivity(new Intent(getApplicationContext(), userChoice.class));
 
                         }else{
 
