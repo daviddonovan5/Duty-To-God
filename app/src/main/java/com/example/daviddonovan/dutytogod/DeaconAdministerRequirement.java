@@ -39,5 +39,10 @@ public class DeaconAdministerRequirement extends AppCompatActivity implements Re
 
             ref.child("users").child(user).child("requirements").child("administerRequirement").setValue("true");
         }
-    }
+
+          public void updateText(View view) {
+
+              ref.child("users").child(user).child("requirements").child("administerRequirement").setValue("true");
+        }
+}
 
