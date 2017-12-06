@@ -21,7 +21,9 @@ public class DeaconDoctrineRequirement extends AppCompatActivity implements Requ
 
         //initializing firebase authentication object
         firebaseAuth = FirebaseAuth.getInstance();
-        user = firebaseAuth.getUid();
+        String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
+        user = rawUserEmail.replace("@", "AT");
+        user = rawUserEmail.replace(".", "");
     }
 
     boolean complete;

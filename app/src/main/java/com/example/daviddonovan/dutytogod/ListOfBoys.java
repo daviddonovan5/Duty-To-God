@@ -16,13 +16,13 @@ public class ListOfBoys extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_of_boys);
-        Toast.makeText(this, "LIST OF BOYS?", Toast.LENGTH_SHORT).show();
+
+
     }
 
-    /*
-    private void getDeacon(View theView){
 
-        // THIS NEEDS TO CHANGE!!!!
-        startActivity(new Intent(getApplicationContext(), Progress.class));
-    }*/
+    void getDeacon(View theView){
+
+        startActivity(new Intent(ListOfBoys.this, LeaderDeaconProgress.class));
+    }
 }

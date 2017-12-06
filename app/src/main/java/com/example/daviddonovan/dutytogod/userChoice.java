@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class userChoice extends AppCompatActivity {
 
     String user = "Default";
+    String userEmail = "Default";
 
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
 
@@ -28,10 +29,12 @@ public class userChoice extends AppCompatActivity {
 
         //initializing firebase authentication object
        firebaseAuth = FirebaseAuth.getInstance();
-       user = firebaseAuth.getUid();
     }
 
     void setLeader(View theView) {
+        String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
+        user = rawUserEmail.replace("@", "AT");
+        user = rawUserEmail.replace(".", "");
         ref.child("users").child(user).child("userType").setValue("Leader");
         Intent requirementIntent = new Intent(this, ListOfBoys.class);
         startActivity(requirementIntent);
@@ -39,7 +42,6 @@ public class userChoice extends AppCompatActivity {
     }
 
     void setDeacon(View theView) {
-
         writeDeaconInformation();
         startActivity(new Intent(getApplicationContext(), Progress.class));
 
@@ -47,6 +49,11 @@ public class userChoice extends AppCompatActivity {
 
     private void writeDeaconInformation()
     {
+        String user = firebaseAuth.getCurrentUser().getEmail();
+
+        String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
+        user = rawUserEmail.replace("@", "AT");
+        user = rawUserEmail.replace(".", "");
         ref.child("users").child(user).child("userType").setValue("Deacon");
         ref.child("users").child(user).child("requirements").child("prayRequirement").setValue("false");
         ref.child("users").child(user).child("requirements").child("worthilyRequirement").setValue("false");

@@ -19,6 +19,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,12 +33,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextEmail;
     private EditText editTextPassword;
     private TextView textViewSignup;
+    String user = "Default";
 
     //firebase auth object
     private FirebaseAuth firebaseAuth;
 
     //progress dialog
     private ProgressDialog progressDialog;
+
+    // database reference
+    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
 
 
     @Override
@@ -100,11 +109,29 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                             //start the profile activity
                             finish();
 
-                            startActivity(new Intent(getApplicationContext(), Progress.class));
 
-                            // get usertype from database
-                            // if user is young man send to progress screen
-                            // else send to EnterEmail activity
+                            String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
+                            user = rawUserEmail.replace("@", "AT");
+                            user = rawUserEmail.replace(".", "");
+
+                            DatabaseReference userTypeRef  = ref.child("users").child(user).child("userType");
+
+                            userTypeRef.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                    String progress = dataSnapshot.getValue(String.class);
+                                    if (progress.matches("Leader")) {
+                                        Intent requirementIntent = new Intent(Login.this, ListOfBoys.class);
+                                        startActivity(requirementIntent);
+                                    }
+                                    else {
+                                        startActivity(new Intent(getApplicationContext(), Progress.class));
+                                    }
+                                }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) { }
+                            });
 
                     }
 
@@ -122,6 +149,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         if(view == textViewSignup){
             finish();
+
             startActivity(new Intent(this, MainActivity.class));
         }
     }

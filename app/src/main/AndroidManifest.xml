@@ -70,8 +70,13 @@
                 <action android:name="android.intent.action.RUN" />
             </intent-filter>
         </activity>
-        <activity android:name=".userChoice"></activity>
+        <activity android:name=".userChoice" />
         <activity android:name=".ListOfBoys">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LeaderDeaconProgress">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />
             </intent-filter>

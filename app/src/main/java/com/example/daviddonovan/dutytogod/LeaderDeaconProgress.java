@@ -52,8 +52,10 @@ public class LeaderDeaconProgress extends AppCompatActivity {
         //if the user is not logged in
         //that means current user will return null
         if(firebaseAuth.getCurrentUser() == null){
+
             //closing this activity
             finish();
+
             //starting login activity
             startActivity(new Intent(this, Login.class));
 
@@ -68,7 +70,14 @@ public class LeaderDeaconProgress extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.d("progress", "onStart");
-        user = firebaseAuth.getUid();
+
+
+        // GET EMAIL FROM PREVIOUS PAGE
+        //String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
+        String rawUserEmail = "deacon1@gmail.com";
+        user = rawUserEmail.replace("@", "AT");
+        user = rawUserEmail.replace(".", "");
+
         /*ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -86,7 +95,6 @@ public class LeaderDeaconProgress extends AppCompatActivity {
             }
         });
         */
-
 
         DatabaseReference prayRef  = ref.child("users").child(user).child("requirements").child("prayRequirement");
 
@@ -213,10 +221,13 @@ public class LeaderDeaconProgress extends AppCompatActivity {
     }
 
     public void logout(View view) {
+
+
         firebaseAuth.signOut();
         finish();
 
         startActivity(new Intent(this, Login.class));
+
     }
 }
 

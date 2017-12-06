@@ -77,7 +77,11 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     protected void onStart() {
         super.onStart();
         Log.d("progress", "onStart");
-        user = firebaseAuth.getUid();
+
+        String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
+        user = rawUserEmail.replace("@", "AT");
+        user = rawUserEmail.replace(".", "");
+
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
