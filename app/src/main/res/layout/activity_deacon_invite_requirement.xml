@@ -35,7 +35,7 @@
                 android:layout_alignStart="@+id/textView13"
                 android:layout_below="@+id/textView13"
                 android:text="▪ Write down in a journal or a notebook the experiences you have as you invite others to come unto Christ. Also write down ways you feel you are becoming a better missionary. Consider sharing your experiences with others."
-                android:textSize="12sp" />
+                android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView13"
@@ -57,17 +57,17 @@
             android:layout_alignStart="@+id/shareText"
             android:layout_below="@+id/shareText"
             android:hint="..."
-            android:textSize="12sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/shareText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Names of people and how I will help them come unto Christ:"
-            android:textSize="12sp"
-            android:layout_below="@+id/actInput"
-            android:layout_alignLeft="@+id/actInput"
-            android:layout_alignStart="@+id/actInput" />
+            android:textSize="20sp"
+            android:layout_below="@+id/loadNotes"
+            android:layout_alignLeft="@+id/actText"
+            android:layout_alignStart="@+id/actText" />
 
         <!-- Learn Title -->
         <TextView
@@ -90,7 +90,7 @@
             android:text="▪ Read Doctrine and Covenants 20:59. What does the phrase “come unto Christ” mean to you? Share your thoughts and feelings with a quorum leader or your parents, and ask what the phrase means to them.
 ▪ Contrast the missionary stories of Ammon (Alma 17–19) and Corianton (Alma 39:1–11). What infl uence did their actions have on the people they taught? Consider ways you can set a good example that can help people come unto Christ.
 ▪ Think about family members and friends whom you could invite to come unto Christ. Write down their names and what you will do to help them (such as inviting them to a Church activity or giving them a copy of the Book of  Mormon or a Church magazine)."
-            android:textSize="12sp"
+            android:textSize="20sp"
             android:layout_below="@+id/Learn"
             android:layout_alignLeft="@+id/Learn"
             android:layout_alignStart="@+id/Learn" />
@@ -114,11 +114,11 @@
 
         <!-- Share Title -->
         <TextView
-            android:id="@+id/actText"
+            android:id="@+id/actPrompt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ways I will set a good example for others"
-            android:textSize="12sp"
+            android:textSize="20sp"
             android:layout_below="@+id/learn"
             android:layout_alignLeft="@+id/learn"
             android:layout_alignStart="@+id/learn" />
@@ -126,24 +126,23 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/actText"
-            android:layout_alignStart="@+id/actText"
-            android:layout_below="@+id/actText"
+            android:layout_alignLeft="@+id/actPrompt"
+            android:layout_alignStart="@+id/actPrompt"
+            android:layout_below="@+id/actPrompt"
             android:layout_marginTop="11dp"
             android:id="@+id/textInputLayout2">
 
         </android.support.design.widget.TextInputLayout>
 
         <EditText
-            android:id="@+id/actInput"
+            android:id="@+id/actText"
             android:layout_width="match_parent"
             android:layout_height="28dp"
-            android:layout_alignLeft="@+id/actText"
-            android:layout_alignStart="@+id/actText"
-            android:layout_below="@+id/actText"
+            android:layout_alignLeft="@+id/actPrompt"
+            android:layout_alignStart="@+id/actPrompt"
+            android:layout_below="@+id/actPrompt"
             android:hint="..."
-            android:textSize="12sp" />
-
+            android:textSize="20sp" />
             <Button
                 android:id="@+id/markComplete"
                 android:layout_width="wrap_content"
@@ -154,6 +153,26 @@
                 android:text="Mark Activity as Complete"
                 android:onClick="updateComplete"/>
 
+
+            <Button
+                android:id="@+id/saveNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Save Notes"
+                android:onClick="updateNotes"/>
+
+            <Button
+                android:id="@+id/loadNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actText"
+                android:layout_marginLeft="137dp"
+                android:layout_marginStart="137dp"
+                android:text="Load Saved Notes"
+                android:onClick="getNotes"/>
 
         </RelativeLayout>
         <!-- Share Text -->

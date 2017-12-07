@@ -70,7 +70,7 @@
 
             <!-- Act Text -->
             <TextView
-                android:id="@+id/ActText"
+                android:id="@+id/actPrompt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/learn"
@@ -87,7 +87,7 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ActText"
+                android:layout_below="@+id/loadNotes"
                 android:layout_marginTop= "8dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -111,6 +111,36 @@
                 android:layout_marginStart="80dp"
                 android:text="Mark Activity as Complete"
                 android:onClick="updateComplete"/>
+
+            <Button
+                android:id="@+id/saveNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Save Notes"
+                android:onClick="updateNotes"/>
+
+            <Button
+                android:id="@+id/loadNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actText"
+                android:layout_marginLeft="137dp"
+                android:layout_marginStart="137dp"
+                android:text="Load Saved Notes"
+                android:onClick="getNotes"/>
+
+            <EditText
+                android:id="@+id/actText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/textAct"
+                android:layout_alignStart="@+id/textAct"
+                android:layout_below="@+id/actPrompt"
+                android:hint="..."
+                android:textSize="20sp" />
 
 
         </RelativeLayout>

@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+/*
+*/
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //initializing firebase auth object
         firebaseAuth = FirebaseAuth.getInstance();
-/* This still works I am just testing createing a leader - avery
+/* - WE HAVE TO FIX THIS!!! INCLUDE LEADERS
         if(firebaseAuth.getCurrentUser() != null){
             //close this activity
             finish();

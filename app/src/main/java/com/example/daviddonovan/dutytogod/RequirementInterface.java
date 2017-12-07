@@ -1,5 +1,9 @@
 package com.example.daviddonovan.dutytogod;
 
+import android.view.View;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 /**
  * Created by avery on 11/2/2017.
  */
@@ -7,7 +11,9 @@ package com.example.daviddonovan.dutytogod;
 public interface RequirementInterface {
 
 
-    Boolean getIsComplete();
-    void setIsComplete(Boolean complete);
+    void updateComplete(View view);
 
+    void updateNotes(View view);
+
+    void getNotes(View view);
 }
