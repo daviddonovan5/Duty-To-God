@@ -11,12 +11,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.lang.reflect.Array;
-
+/** */
 public class ListOfBoys extends AppCompatActivity {
 
 
     String email;
     EditText emailText;
+    String TAG= "PROGRESS_OF_EMAIL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +28,11 @@ public class ListOfBoys extends AppCompatActivity {
     }
 
 
+    /** */
     void getDeacon(View theView){
 
         email = emailText.getText().toString();
+        Log.d(TAG, "Attempting to get progress with email: " + email );
 
         Intent intent = new Intent(this, LeaderDeaconProgress.class);
         intent.putExtra("email", email);

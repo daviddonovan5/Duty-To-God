@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+/** */
 public class userChoice extends AppCompatActivity {
 
     String user = "Default";
@@ -31,6 +31,7 @@ public class userChoice extends AppCompatActivity {
        firebaseAuth = FirebaseAuth.getInstance();
     }
 
+    /** */
     void setLeader(View theView) {
         String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
         user = rawUserEmail.replace("@", "AT");
@@ -41,18 +42,19 @@ public class userChoice extends AppCompatActivity {
 
     }
 
+    /** */
     void setDeacon(View theView) {
         writeDeaconInformation();
         startActivity(new Intent(getApplicationContext(), Progress.class));
 
     }
 
+    /** */
     private void writeDeaconInformation()
     {
         String user = firebaseAuth.getCurrentUser().getEmail();
 
         String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
-        user = rawUserEmail.replace("@", "AT");
         user = rawUserEmail.replace(".", "");
         ref.child("users").child(user).child("userType").setValue("Deacon");
         ref.child("users").child(user).child("requirements").child("prayRequirement").setValue("false");

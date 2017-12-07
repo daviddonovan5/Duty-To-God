@@ -79,7 +79,6 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
         Log.d("progress", "onStart");
 
         String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
-        user = rawUserEmail.replace("@", "AT");
         user = rawUserEmail.replace(".", "");
 
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -291,6 +290,7 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
         startActivity(requirementIntent);
     }
 
+    /** This creates the user in the database */
     private void writeUserInformation()
     {
         ref.child("users").child(user).child("requirements").child("prayRequirement").setValue("false");
@@ -313,6 +313,7 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     }
 
     @Override
+    /** */
     public void onClick(View v) {
         if(v == logout){
 
@@ -325,6 +326,7 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             startActivity(new Intent(this, MainActivity.class));}
     }
 
+    /** */
     public void logout(View view) {
         firebaseAuth.signOut();
         finish();

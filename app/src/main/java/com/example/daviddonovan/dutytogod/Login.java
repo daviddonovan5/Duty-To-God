@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/** */
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
@@ -34,6 +36,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextPassword;
     private TextView textViewSignup;
     String user = "Default";
+    String TAG = "LOGIN";
 
     //firebase auth object
     private FirebaseAuth firebaseAuth;
@@ -53,14 +56,38 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         //getting firebase auth object
         firebaseAuth = FirebaseAuth.getInstance();
 
-        //if the objects getcurrentuser method is not null
+        //if the objects get current user method is not null
         //means user is already logged in
-        //if(firebaseAuth.getCurrentUser() != null){
+        if(firebaseAuth.getCurrentUser() != null){
             //close this activity
-        //    finish();
+            finish();
             //opening profile activity
-          //  startActivity(new Intent(getApplicationContext(), Progress.class));
-       // }
+
+
+            String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
+            user = rawUserEmail.replace(".", "");
+
+            DatabaseReference userTypeRef  = ref.child("users").child(user).child("userType");
+
+            userTypeRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+
+                    String progress = dataSnapshot.getValue(String.class);
+                    if (progress.matches("Leader")) {
+                        Intent requirementIntent = new Intent(Login.this, ListOfBoys.class);
+                        startActivity(requirementIntent);
+                    }
+                    else {
+                        startActivity(new Intent(getApplicationContext(), Progress.class));
+                    }
+                }
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    Log.d(TAG, "Problem accessing database");
+                }
+            });
+       }
 
         //initializing views
         editTextEmail = (EditText) findViewById(R.id.editEmail);
@@ -75,7 +102,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         textViewSignup.setOnClickListener(this);
     }
 
-    //method for user login
+    /** method for user login */
     private void userLogin(){
         String email = editTextEmail.getText().toString().trim();
         String password  = editTextPassword.getText().toString().trim();
@@ -111,7 +138,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
                             String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
-                            user = rawUserEmail.replace("@", "AT");
                             user = rawUserEmail.replace(".", "");
 
                             DatabaseReference userTypeRef  = ref.child("users").child(user).child("userType");
@@ -130,7 +156,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                                     }
                                 }
                                 @Override
-                                public void onCancelled(DatabaseError databaseError) { }
+                                public void onCancelled(DatabaseError databaseError) {
+                                    Log.d(TAG, "Problem accessing database");
+                                }
                             });
 
                     }
@@ -142,6 +170,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
+    /** */
     public void onClick(View view) {
         if(view == buttonSignIn){
             userLogin();

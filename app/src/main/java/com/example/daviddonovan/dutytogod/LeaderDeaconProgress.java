@@ -17,9 +17,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
+/** */
 public class LeaderDeaconProgress extends AppCompatActivity {
-
 
     RadioButton prayButton;
     RadioButton administerButton;
@@ -32,6 +31,7 @@ public class LeaderDeaconProgress extends AppCompatActivity {
     Button logout;
     String rawUserEmail = "default";
     String user = "Default";
+    String TAG = "LeaderProgress";
 
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
     private FirebaseAuth firebaseAuth;
@@ -53,8 +53,6 @@ public class LeaderDeaconProgress extends AppCompatActivity {
 
         //initializing firebase authentication object
         firebaseAuth = FirebaseAuth.getInstance();
-
-
 
 
         //if the user is not logged in
@@ -86,7 +84,6 @@ public class LeaderDeaconProgress extends AppCompatActivity {
         title.setText(rawUserEmail + " Progress");
 
         //take out symbols from the email
-        user = rawUserEmail.replace("@", "AT");
         user = rawUserEmail.replace(".", "");
 
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -232,8 +229,8 @@ public class LeaderDeaconProgress extends AppCompatActivity {
         });
     }
 
+    /** */
     public void logout(View view) {
-
 
         firebaseAuth.signOut();
         finish();
