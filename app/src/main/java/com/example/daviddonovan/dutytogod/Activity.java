@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-public class Activity extends AppCompatActivity implements DeaconforStrengthofYouth, DeaconPriesthoodDuties, DeaconSpiritualStrength {
+public class Activity extends AppCompatActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
     private String actGoals;
     private String shareNotes;

@@ -19,7 +19,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Progress extends AppCompatActivity implements View.OnClickListener{
 
-
     RadioButton prayButton;
     RadioButton administerButton;
     RadioButton createButton;
@@ -43,17 +42,18 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress);
-        prayButton = (RadioButton)findViewById(R.id.prayProgress);
-        administerButton= (RadioButton)findViewById(R.id.administerProgress);
-        createButton= (RadioButton)findViewById(R.id.createProgress);
-        doctrineButton= (RadioButton)findViewById(R.id.doctrineProgress);
-        inviteButton= (RadioButton)findViewById(R.id.inviteProgress);
-        projectButton= (RadioButton)findViewById(R.id.projectProgress);
-        serveButton= (RadioButton)findViewById(R.id.serveProgress);
-        worthilyButton= (RadioButton)findViewById(R.id.worthilyProgress);
-        logout=(Button) findViewById(R.id.buttonLogout);
 
-        //initializing firebase authentication object
+        prayButton = findViewById(R.id.prayProgress);
+        administerButton = findViewById(R.id.administerProgress);
+        createButton = findViewById(R.id.createProgress);
+        doctrineButton = findViewById(R.id.doctrineProgress);
+        inviteButton = findViewById(R.id.inviteProgress);
+        projectButton = findViewById(R.id.projectProgress);
+        serveButton = findViewById(R.id.serveProgress);
+        worthilyButton = findViewById(R.id.worthilyProgress);
+        logout = findViewById(R.id.buttonLogout);
+
+        //initializing Firebase authentication object
         firebaseAuth = FirebaseAuth.getInstance();
 
         //if the user is not logged in
@@ -89,7 +89,11 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
                     //user is created
                 }
                 else{
-                    writeUserInformation();
+                    // login again
+                    Intent intent = new Intent(getApplicationContext(), Login.class);
+                    startActivity(intent);
+
+
                 }
             }
 

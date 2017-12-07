@@ -24,7 +24,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dp"
-                    android:text="LEADER Progress *CHANGE TO BE DEACONS NAME*"
+                    android:text="Progress"
                     android:textAlignment="center"
                     android:textSize="30sp" />
 
