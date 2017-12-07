@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-/** */
+/**This class will indicate if the user is a leader or a youngman */
 public class userChoice extends AppCompatActivity {
 
     String user = "Default";
@@ -42,14 +42,14 @@ public class userChoice extends AppCompatActivity {
 
     }
 
-    /** */
+    /** This will set the user to Deacon*/
     void setDeacon(View theView) {
         writeDeaconInformation();
         startActivity(new Intent(getApplicationContext(), Progress.class));
 
     }
 
-    /** */
+    /** This method will setup the Deacon with the database */
     private void writeDeaconInformation()
     {
         String user = firebaseAuth.getCurrentUser().getEmail();

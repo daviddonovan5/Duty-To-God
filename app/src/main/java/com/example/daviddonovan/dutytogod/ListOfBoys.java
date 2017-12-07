@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.lang.reflect.Array;
-/** */
+/** This class will prompt the user for an email address and will redirect them to the leader progress screen*/
 public class ListOfBoys extends AppCompatActivity {
 
 
@@ -28,7 +28,7 @@ public class ListOfBoys extends AppCompatActivity {
     }
 
 
-    /** */
+    /** This method will get the email and set the email to be able get the progress from the database*/
     void getDeacon(View theView){
 
         email = emailText.getText().toString();

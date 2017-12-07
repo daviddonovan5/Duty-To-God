@@ -16,17 +16,18 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-/** This class displays the progress of the deacon. It will grab the information from the database associated with the user and display it */
-public class Progress extends AppCompatActivity implements View.OnClickListener{
 
-    RadioButton prayButton;
-    RadioButton administerButton;
-    RadioButton createButton;
-    RadioButton doctrineButton;
-    RadioButton inviteButton;
-    RadioButton projectButton;
-    RadioButton serveButton;
-    RadioButton worthilyButton;
+public class LeaderProgress extends AppCompatActivity implements View.OnClickListener{
+
+
+    RadioButton prayButtonLeader;
+    RadioButton administerButtonLeader;
+    RadioButton createButtonLeader;
+    RadioButton doctrineButtonLeader;
+    RadioButton inviteButtonLeader;
+    RadioButton projectButtonLeader;
+    RadioButton serveButtonLeader;
+    RadioButton worthilyButtonLeader;
     Button logout;
     String user = "Default";
 
@@ -41,19 +42,18 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_progress);
+        setContentView(R.layout.activity_leader_progress);
+        prayButtonLeader = (RadioButton)findViewById(R.id.prayProgress);
+        administerButtonLeader= (RadioButton)findViewById(R.id.administerProgress);
+        createButtonLeader= (RadioButton)findViewById(R.id.createProgress);
+        doctrineButtonLeader= (RadioButton)findViewById(R.id.doctrineProgress);
+        inviteButtonLeader= (RadioButton)findViewById(R.id.inviteProgress);
+        projectButtonLeader= (RadioButton)findViewById(R.id.projectProgress);
+        serveButtonLeader= (RadioButton)findViewById(R.id.serveProgress);
+        worthilyButtonLeader= (RadioButton)findViewById(R.id.worthilyProgress);
+        logout=(Button) findViewById(R.id.buttonLogout);
 
-        prayButton = findViewById(R.id.prayProgress);
-        administerButton = findViewById(R.id.administerProgress);
-        createButton = findViewById(R.id.createProgress);
-        doctrineButton = findViewById(R.id.doctrineProgress);
-        inviteButton = findViewById(R.id.inviteProgress);
-        projectButton = findViewById(R.id.projectProgress);
-        serveButton = findViewById(R.id.serveProgress);
-        worthilyButton = findViewById(R.id.worthilyProgress);
-        logout = findViewById(R.id.buttonLogout);
-
-        //initializing Firebase authentication object
+        //initializing firebase authentication object
         firebaseAuth = FirebaseAuth.getInstance();
 
         //if the user is not logged in
@@ -71,16 +71,13 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     }
 
     /** OnStart Function
-    Will grab progress from the database and set the progress of each activity
+     Will grab progress from the database and set the progress of each activity
      */
     @Override
     protected void onStart() {
         super.onStart();
         Log.d("progress", "onStart");
-
-        String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
-        user = rawUserEmail.replace(".", "");
-
+        user = firebaseAuth.getUid();
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -88,11 +85,7 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
                     //user is created
                 }
                 else{
-                    // login again
-                    Intent intent = new Intent(getApplicationContext(), Login.class);
-                    startActivity(intent);
-
-
+                    writeUserInformation();
                 }
             }
 
@@ -111,9 +104,9 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
 
                 String progress = dataSnapshot.getValue(String.class);
                 if (progress.matches("true")) {
-                    prayButton.setChecked(true);}
+                    prayButtonLeader.setChecked(true);}
                 else {
-                    prayButton.setChecked(false);
+                    prayButtonLeader.setChecked(false);
                 }
             }
             @Override
@@ -126,9 +119,9 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
                 if (progress.matches("true")) {
-                    administerButton.setChecked(true); }
+                    administerButtonLeader.setChecked(true); }
                 else {
-                    administerButton.setChecked(false);}
+                    administerButtonLeader.setChecked(false);}
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
@@ -140,9 +133,9 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
                 if (progress.matches("true")) {
-                    createButton.setChecked(true); }
+                    createButtonLeader.setChecked(true); }
                 else {
-                    createButton.setChecked(false);}
+                    createButtonLeader.setChecked(false);}
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
@@ -156,9 +149,9 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
                 if (progress.matches("true")) {
-                    doctrineButton.setChecked(true); }
+                    doctrineButtonLeader.setChecked(true); }
                 else {
-                    doctrineButton.setChecked(false);}
+                    doctrineButtonLeader.setChecked(false);}
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
@@ -171,9 +164,9 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
                 if (progress.matches("true")) {
-                    inviteButton.setChecked(true); }
+                    inviteButtonLeader.setChecked(true); }
                 else {
-                    inviteButton.setChecked(false);}
+                    inviteButtonLeader.setChecked(false);}
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
@@ -189,9 +182,9 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
                 if (progress.matches("true")) {
-                    projectButton.setChecked(true); }
+                    projectButtonLeader.setChecked(true); }
                 else {
-                    projectButton.setChecked(false);}
+                    projectButtonLeader.setChecked(false);}
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
@@ -203,9 +196,9 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
                 if (progress.matches("true")) {
-                    serveButton.setChecked(true); }
+                    serveButtonLeader.setChecked(true); }
                 else {
-                    serveButton.setChecked(false);}
+                    serveButtonLeader.setChecked(false);}
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
@@ -217,15 +210,15 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String progress = dataSnapshot.getValue(String.class);
                 if (progress.matches("true")) {
-                    worthilyButton.setChecked(true); }
+                    worthilyButtonLeader.setChecked(true); }
                 else {
-                    worthilyButton.setChecked(false);}
+                    worthilyButtonLeader.setChecked(false);}
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
         });
 
-   }
+    }
 
     /** Start the Pray Requirement */
     public void getPray(View theButton) {
@@ -290,7 +283,6 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
         startActivity(requirementIntent);
     }
 
-    /** This creates the user in the database */
     private void writeUserInformation()
     {
         ref.child("users").child(user).child("requirements").child("prayRequirement").setValue("false");
@@ -313,7 +305,6 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
     }
 
     @Override
-    /** this method is for the logout button*/
     public void onClick(View v) {
         if(v == logout){
 
@@ -326,7 +317,6 @@ public class Progress extends AppCompatActivity implements View.OnClickListener{
             startActivity(new Intent(this, MainActivity.class));}
     }
 
-    /**this method is for the logout button and will send them back to the Login Activity */
     public void logout(View view) {
         firebaseAuth.signOut();
         finish();

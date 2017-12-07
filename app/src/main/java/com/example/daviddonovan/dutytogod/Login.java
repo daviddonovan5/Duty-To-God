@@ -26,7 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-/** */
+/** This will get the email and password credentials and verify with firebase*/
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
@@ -170,7 +170,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
-    /** */
+    /** This will verify to see if the user is already logged in */
     public void onClick(View view) {
         if(view == buttonSignIn){
             userLogin();

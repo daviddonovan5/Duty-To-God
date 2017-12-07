@@ -241,8 +241,8 @@
                     android:id="@+id/buttonLogout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/projectProgress"
-                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/buttonGoback"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="30dp"
                     android:layout_marginLeft="140dp"
                     android:textSize="20sp"
@@ -250,6 +250,20 @@
                     android:textColor="@color/white"
                     android:background="@color/black"
                     android:text="Logout" />
+
+                <Button
+                    android:id="@+id/buttonGoback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/projectProgress"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="140dp"
+                    android:textSize="20sp"
+                    android:onClick="goBack"
+                    android:textColor="@color/white"
+                    android:background="@color/black"
+                    android:text="Go Back" />
 
 
             </RelativeLayout>

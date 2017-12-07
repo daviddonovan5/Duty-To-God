@@ -12,7 +12,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-/** */
+/** Displays the Learn Act and Share portions for the serve requirement Page
+ * & lets the young man write down the action they plan on taking.
+ * Implements the Requirement Interface*/
+
 public class DeaconServeRequirement extends AppCompatActivity implements RequirementInterface{
 
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();

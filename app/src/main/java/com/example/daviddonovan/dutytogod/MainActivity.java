@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-/** */
+/** This is the main class and will run the program */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     //defining view objects
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth firebaseAuth;
 
     @Override
-    /** */
+    /** onCreate will start once the app is started it is also used to register new users*/
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         goLogin.setOnClickListener(this);
     }
 
-    /** */
+    /** This will be called from main and created an email and password*/
     private void registerUser(){
 
         //getting email and password from edit texts
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    /** */
+    /** will assign the on clicks using the button Views*/
     public void onClick(View view) {
         if(view == buttonSignup){
             registerUser();

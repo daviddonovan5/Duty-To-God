@@ -12,7 +12,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-/** */
+/**  Displays the Worthily requirement lets the young man take notes and mark the activity as complete*/
 public class DeaconWorthilyRequirement extends AppCompatActivity implements RequirementInterface{
 
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();

@@ -17,7 +17,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-/** */
+/** This will display the progress of the youngman to the leader, without showing the notes made by the
+ * youngMan.  The leader will need to enter the email to retrieve the information*/
 public class LeaderDeaconProgress extends AppCompatActivity {
 
     RadioButton prayButton;
@@ -229,13 +230,22 @@ public class LeaderDeaconProgress extends AppCompatActivity {
         });
     }
 
-    /** */
+    /**This method will let the user log out of the progress screen */
     public void logout(View view) {
 
         firebaseAuth.signOut();
         finish();
 
         startActivity(new Intent(this, Login.class));
+
+    }
+
+    /**This method will let the user enter a new email */
+    public void goBack(View view) {
+
+        finish();
+
+        startActivity(new Intent(this, ListOfBoys.class));
 
     }
 }

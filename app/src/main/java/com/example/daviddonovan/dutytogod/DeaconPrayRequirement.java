@@ -12,7 +12,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-/** */
+/** Displays the Learn Act and Share for the Pray requirement Page & lets the young man take notes,
+ * Implements the Requirement Interface */
 public class DeaconPrayRequirement extends AppCompatActivity implements RequirementInterface {
 
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
