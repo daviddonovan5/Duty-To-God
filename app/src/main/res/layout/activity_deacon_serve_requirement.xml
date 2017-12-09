@@ -19,8 +19,7 @@
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText9"
-                android:layout_alignStart="@+id/editText9"
+
                 android:layout_below="@+id/textView12"
                 android:text="Share with a parent or quorum members some of your experiences serving others. For example, you could talk about how your service has affected you and the people you have served."
                 android:textSize="12sp" />
@@ -32,39 +31,22 @@
                 android:text="SHARE"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_below="@+id/editText9"
+                android:layout_below="@+id/loadNotes"
                 android:layout_alignRight="@+id/Learn"
                 android:layout_alignEnd="@+id/Learn" />
 
-            <EditText
-                android:id="@+id/editText9"
-                android:layout_width="match_parent"
-                android:layout_height="28dp"
-                android:hint="..."
-                android:textSize="12sp"
-                android:layout_below="@+id/textView10"
-                android:layout_alignLeft="@+id/textView10"
-                android:layout_alignStart="@+id/textView10" />
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/actText"
-                android:layout_alignStart="@+id/actText"
-                android:layout_below="@+id/actText"
-                android:text="My personal plan to give service: "
-                android:textSize="12sp" />
 
             <EditText
                 android:id="@+id/actText"
                 android:layout_width="match_parent"
-                android:layout_height="28dp"
+                android:layout_height="100dp"
                 android:layout_alignLeft="@+id/actPrompt"
                 android:layout_alignStart="@+id/actPrompt"
                 android:layout_below="@+id/actPrompt"
-                android:hint="..."
-                android:textSize="12sp" />
+                android:hint="NOTES..."
+                android:textSize="20sp"
+                android:inputType="textMultiLine"/>
 
             <TextView
                 android:layout_width="wrap_content"

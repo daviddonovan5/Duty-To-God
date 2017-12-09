@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/shareInput"
                 android:layout_alignStart="@+id/shareInput"
-                android:layout_below="@+id/actText"
+                android:layout_below="@+id/actPrompt"
                 android:layout_marginTop="11dp"
                 android:text="SHARE"
                 android:textSize="20sp"
@@ -47,21 +47,23 @@
             <EditText
                 android:id="@+id/shareInput"
                 android:layout_width="match_parent"
-                android:layout_height="28dp"
+                android:layout_height="100dp"
                 android:layout_alignLeft="@+id/shareText"
                 android:layout_alignStart="@+id/shareText"
                 android:layout_below="@+id/shareText"
-                android:hint="..."
-                android:textSize="20sp" />
+                android:hint="NOTES.."
+                android:textSize="20sp"
+                android:inputType="textMultiLine"
+                />
 
             <TextView
                 android:id="@+id/shareText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/loadNotes"
-                android:layout_alignStart="@+id/actText"
+                android:layout_alignStart="@+id/actPrompt"
                 android:layout_below="@+id/share"
-                android:text="When I will teach about these topics: "
+                android:text="When I will teach about these topics:\n"
                 android:textSize="20sp" />
 
             <!-- Learn Title -->
@@ -85,9 +87,9 @@
                 android:layout_alignLeft="@+id/Learn"
                 android:layout_alignStart="@+id/Learn"
                 android:layout_below="@+id/Learn"
-                android:text="▪ Read Doctrine and Covenants 11:21. What promises does the Lord give to those who study His word? You will need a basic understanding and a testimony of gospel truths to fulfi ll your duties now as a priesthood holder and in the future as a full-time missionary and as a husband and father.
-▪ Look at the list of doctrinal topics on page 20, and choose four or more that you would like to learn about. One of these should be “The Priesthood and Priesthood Keys.” You can use the scriptures (including the Topical Guide), True to the Faith, Preach My Gospel, and the words of latter-day prophets to learn about these topics.
-▪ For each topic you study, create a simple outline. It could include: (1) a defi nition of the topic, (2) teachings and examples from the scriptures and your own life, and (3) your thoughts and feelings about why this topic is important. For examples of outlines, see Preach My Gospel (chapters 2 and 3) or visit DutytoGod.lds.org"
+                android:text="Read Doctrine and Covenants 11:21. \nWhat promises does the Lord give to those who study His word? You will need a basic understanding and a testimony of gospel truths to fulfill your duties now as a priesthood holder and in the future as a full-time missionary and as a husband and father.\n
+                \nLook at the list of doctrinal topics and choose four or more that you would like to learn about. \nOne of these should be “The Priesthood and Priesthood Keys.” You can use the scriptures (including the Topical Guide), True to the Faith, Preach My Gospel, and the words of latter-day prophets to learn about these topics.
+                \n\nFor each topic you study, create a simple outline. It could include: (1) a definition of the topic, (2) teachings and examples from the scriptures and your own life, and (3) your thoughts and feelings about why this topic is important. For examples of outlines, see Preach My Gospel (chapters 2 and 3) or visit DutytoGod.lds.org"
                 android:textSize="20sp" />
 
 
@@ -113,7 +115,7 @@
                 android:layout_alignLeft="@+id/learn"
                 android:layout_alignStart="@+id/learn"
                 android:layout_below="@+id/learn"
-                android:text="Doctrinal topics I will study: "
+                android:text="Doctrinal topics I will study: \n "
                 android:textSize="20sp" />
 
             <android.support.design.widget.TextInputLayout
@@ -127,21 +129,12 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <EditText
-                android:id="@+id/actText"
-                android:layout_width="match_parent"
-                android:layout_height="28dp"
-                android:layout_alignLeft="@+id/actPrompt"
-                android:layout_alignStart="@+id/actPrompt"
-                android:layout_below="@+id/actPrompt"
-                android:hint="..."
-                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/markComplete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/shareInput"
+                android:layout_below="@id/loadNotes"
                 android:layout_marginLeft="40dp"
                 android:layout_marginStart="80dp"
                 android:text="Mark Activity as Complete"
@@ -152,9 +145,9 @@
                 android:id="@+id/saveNotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/actText"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
+                android:layout_below="@id/shareInput"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:text="Save Notes"
                 android:onClick="updateNotes"/>
 
@@ -162,9 +155,9 @@
                 android:id="@+id/loadNotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/actText"
-                android:layout_marginLeft="137dp"
-                android:layout_marginStart="137dp"
+                android:layout_below="@id/shareInput"
+                android:layout_marginLeft="180dp"
+                android:layout_marginStart="180dp"
                 android:text="Load Saved Notes"
                 android:onClick="getNotes"/>
         </RelativeLayout>

@@ -137,12 +137,15 @@
         <EditText
             android:id="@+id/actText"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
+            android:layout_height="100dp"
             android:layout_alignLeft="@+id/actPrompt"
             android:layout_alignStart="@+id/actPrompt"
             android:layout_below="@+id/actPrompt"
-            android:hint="..."
-            android:textSize="20sp" />
+            android:hint="NOTES..."
+            android:textSize="20sp"
+            android:inputType="textMultiLine"
+            />
+
             <Button
                 android:id="@+id/markComplete"
                 android:layout_width="wrap_content"

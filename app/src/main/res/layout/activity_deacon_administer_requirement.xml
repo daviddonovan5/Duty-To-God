@@ -22,28 +22,10 @@
                 android:layout_alignLeft="@+id/textView8"
                 android:layout_alignStart="@+id/textView8"
                 android:layout_below="@+id/textView8"
-                android:text="▪ After following through with your plan, discuss with members of your quorum how your experiences with the sacrament have helped you become more reverent."
+                android:text="After following through with your plan, discuss with members of your quorum how your experiences with the sacrament have helped you become more reverent. \n"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/actPrompt"
-                android:layout_alignStart="@+id/actPrompt"
-                android:layout_below="@+id/loadNotes"
-                android:text="What I will do to have a more meaningful experience when I partake of the sacrament:"
-                android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/editText5"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_alignLeft="@+id/textView3"
-                android:layout_alignStart="@+id/textView3"
-                android:layout_below="@+id/textView3"
-                android:hint="..."
-                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/title"
@@ -61,9 +43,8 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText5"
-                android:layout_alignStart="@+id/editText5"
-                android:layout_below="@+id/editText5"
+
+                android:layout_below="@+id/loadNotes"
                 android:text="SHARE"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -88,12 +69,12 @@
                 android:layout_alignLeft="@+id/Learn"
                 android:layout_alignStart="@+id/Learn"
                 android:layout_below="@+id/Learn"
-                android:text="▪ Read Doctrine and Covenants 20:76–79. What do the sacramental bread and water represent? Read Luke 22:19–20 and 3 Nephi 18:1–11. Whom do you represent when you pass the sacrament?
-▪ Ask your parents or your quorum leaders the following questions, and write their answers:
-    1. What does the ordinance of the sacrament mean to you?
+                android:text="Read Doctrine and Covenants 20:76–79. \n What do the sacramental bread and water represent? \n\nRead Luke 22:19–20 and 3 Nephi 18:1–11. \nWhom do you represent when you pass the sacrament? \n
+\n\nAsk your parents or your quorum leaders the following questions, and write their answers: \n
+    1. What does the ordinance of the sacrament mean to you? \n
     2. What can I do as a deacon to help you have a meaningful
-       experience with the sacrament?
-▪ After counseling with your quorum, write on the next page what you will do to pass the sacrament in a way that shows reverence for the Savior and His Atonement and encourages others to show the same reverence. Also write what you will do to have a more meaningful experience when you partake of the sacrament."
+       experience with the sacrament? \n \n
+After counseling with your quorum, write what you will do to pass the sacrament in a way that shows reverence for the Savior and His Atonement and encourages others to show the same reverence. \n Also write what you will do to have a more meaningful experience when you partake of the sacrament.\n"
                 android:textSize="20sp" />
 
 
@@ -117,7 +98,7 @@
                 android:layout_alignLeft="@+id/learn"
                 android:layout_alignStart="@+id/learn"
                 android:layout_below="@+id/learn"
-                android:text="Several things I will do to show reverence when I pass the sacrament and to encourage others to show the same reverence:"
+                android:text="Several things I will do to show reverence when I pass the sacrament and to encourage others to show the same reverence: \n\n What I will do to have a more meaningful experience when I partake of the sacrament: \n"
                 android:textSize="20sp" />
 
             <!-- Share Title -->
@@ -127,12 +108,13 @@
             <EditText
                 android:id="@+id/actText"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="100dp"
                 android:layout_alignLeft="@+id/textAct"
                 android:layout_alignStart="@+id/textAct"
                 android:layout_below="@+id/textAct"
-                android:hint="..."
-                android:textSize="20sp" />
+                android:hint="Notes.."
+                android:textSize="20sp"
+                android:inputType="textMultiLine"/>
 
             <Button
                 android:id="@+id/saveNotes"
