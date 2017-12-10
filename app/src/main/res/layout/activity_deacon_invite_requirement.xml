@@ -15,18 +15,168 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="12dp"
-            android:text="Invite All to Come Unto Christ"
-            android:textAlignment="center"
-            android:textSize="30sp" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="12dp"
+                android:text="Invite All to Come Unto Christ"
+                android:textAlignment="center"
+                android:textSize="30sp" />
 
+            <!-- Learn Title -->
+            <TextView
+                android:id="@+id/Learn"
+                android:text="LEARN"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop= "8dp"
+                android:layout_marginLeft="20dp"/>
+
+
+            <!-- Learn Text -->
+            <TextView
+                android:id="@+id/LearnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Learn"
+                android:layout_alignStart="@+id/Learn"
+                android:layout_below="@+id/Learn"
+                android:layout_marginRight="20dp"
+                android:text="▪ Read Doctrine and Covenants 20:59. What does the phrase “come unto Christ” mean to you? Share your thoughts and feelings with a quorum leader or your parents, and ask what the phrase means to them.
+▪ Contrast the missionary stories of Ammon (Alma 17–19) and Corianton (Alma 39:1–11). What infl uence did their actions have on the people they taught? Consider ways you can set a good example that can help people come unto Christ.
+▪ Think about family members and friends whom you could invite to come unto Christ. Write down their names and what you will do to help them (such as inviting them to a Church activity or giving them a copy of the Book of  Mormon or a Church magazine)."
+                android:textSize="12sp" />
+
+
+            <!-- Act Title -->
+            <TextView
+                android:id="@+id/learn"
+                android:text="ACT"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LearnText"
+                android:layout_marginTop= "8dp"
+                android:layout_marginLeft="20dp"/>
+
+            <!-- Act Text -->
+
+            <TextView
+                android:id="@+id/actText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/learn"
+                android:layout_alignStart="@+id/learn"
+                android:layout_below="@+id/learn"
+                android:text="Ways I will set a good example for others"
+                android:textSize="12sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/actText"
+                android:layout_alignStart="@+id/actText"
+                android:layout_below="@+id/actText"
+                android:layout_marginTop="11dp"
+                android:id="@+id/textInputLayout2">
+
+            </android.support.design.widget.TextInputLayout>
+
+            <EditText
+                android:id="@+id/actInput"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignLeft="@+id/actText"
+                android:layout_alignStart="@+id/actText"
+                android:layout_below="@+id/actText"
+                android:layout_marginRight="20dp"
+                android:hint="..."
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/saveNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actInput"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Save Notes"
+                android:onClick="updateNotes"/>
+
+            <Button
+                android:id="@+id/loadNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/actInput"
+                android:layout_marginLeft="137dp"
+                android:layout_marginStart="137dp"
+                android:text="Load Saved Notes"
+                android:onClick="getNotes"/>
+
+            <TextView
+                android:id="@+id/shareText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/actInput"
+                android:layout_alignStart="@+id/actInput"
+                android:layout_below="@+id/saveNotes"
+                android:layout_marginRight="20dp"
+                android:text="Names of people and how I will help them come unto Christ:"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/shareInput"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignLeft="@+id/shareText"
+                android:layout_alignStart="@+id/shareText"
+                android:layout_below="@+id/shareText"
+                android:layout_marginRight="20dp"
+                android:hint="..."
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/saveNotes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shareInput"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Save Notes"
+                android:onClick="updateNotes"/>
+
+            <Button
+                android:id="@+id/loadNotes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shareInput"
+                android:layout_marginLeft="137dp"
+                android:layout_marginStart="137dp"
+                android:text="Load Saved Notes"
+                android:onClick="getNotes"/>
+
+            <!-- Share Title -->
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="SHARE"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/saveNotes1"
+                android:layout_alignLeft="@+id/shareInput"
+                android:layout_alignStart="@+id/shareInput" />
+
+            <!-- Share Text -->
             <TextView
                 android:id="@+id/shareText2"
                 android:layout_width="wrap_content"
@@ -34,117 +184,10 @@
                 android:layout_alignLeft="@+id/textView13"
                 android:layout_alignStart="@+id/textView13"
                 android:layout_below="@+id/textView13"
-                android:text="▪ Write down in a journal or a notebook the experiences you have as you invite others to come unto Christ. Also write down ways you feel you are becoming a better missionary. Consider sharing your experiences with others."
-                android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
-            android:text="SHARE"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_below="@+id/shareInput"
-            android:layout_alignLeft="@+id/shareInput"
-            android:layout_alignStart="@+id/shareInput" />
-
-        <EditText
-            android:id="@+id/shareInput"
-            android:layout_width="match_parent"
-            android:layout_height="28dp"
-            android:layout_alignLeft="@+id/shareText"
-            android:layout_alignStart="@+id/shareText"
-            android:layout_below="@+id/shareText"
-            android:hint="..."
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/shareText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Names of people and how I will help them come unto Christ:"
-            android:textSize="20sp"
-            android:layout_below="@+id/loadNotes"
-            android:layout_alignLeft="@+id/actText"
-            android:layout_alignStart="@+id/actText" />
-
-        <!-- Learn Title -->
-        <TextView
-            android:id="@+id/Learn"
-            android:text="LEARN"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/title"
-            android:layout_marginTop= "8dp"
-            android:layout_marginLeft="20dp"/>
-
-
-        <!-- Learn Text -->
-        <TextView
-            android:id="@+id/LearnText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="▪ Read Doctrine and Covenants 20:59. What does the phrase “come unto Christ” mean to you? Share your thoughts and feelings with a quorum leader or your parents, and ask what the phrase means to them.
-▪ Contrast the missionary stories of Ammon (Alma 17–19) and Corianton (Alma 39:1–11). What infl uence did their actions have on the people they taught? Consider ways you can set a good example that can help people come unto Christ.
-▪ Think about family members and friends whom you could invite to come unto Christ. Write down their names and what you will do to help them (such as inviting them to a Church activity or giving them a copy of the Book of  Mormon or a Church magazine)."
-            android:textSize="20sp"
-            android:layout_below="@+id/Learn"
-            android:layout_alignLeft="@+id/Learn"
-            android:layout_alignStart="@+id/Learn" />
-
-
-
-
-        <!-- Act Title -->
-        <TextView
-            android:id="@+id/learn"
-            android:text="ACT"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/LearnText"
-            android:layout_marginTop= "8dp"
-            android:layout_marginLeft="20dp"/>
-
-        <!-- Act Text -->
-
-        <!-- Share Title -->
-        <TextView
-            android:id="@+id/actPrompt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ways I will set a good example for others"
-            android:textSize="20sp"
-            android:layout_below="@+id/learn"
-            android:layout_alignLeft="@+id/learn"
-            android:layout_alignStart="@+id/learn" />
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/actPrompt"
-            android:layout_alignStart="@+id/actPrompt"
-            android:layout_below="@+id/actPrompt"
-            android:layout_marginTop="11dp"
-            android:id="@+id/textInputLayout2">
-
-        </android.support.design.widget.TextInputLayout>
-
-        <EditText
-            android:id="@+id/actText"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_alignLeft="@+id/actPrompt"
-            android:layout_alignStart="@+id/actPrompt"
-            android:layout_below="@+id/actPrompt"
-            android:hint="NOTES..."
-            android:textSize="20sp"
-            android:inputType="textMultiLine"
-            />
+                android:layout_marginRight="20dp"
+                android:text="▪ Write down in a journal or a notebook the experiences you have as you invite others to come unto Christ. Also write down ways you feel you are becoming a better missionary. Consider sharing your experiences with others.
+"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/markComplete"
@@ -157,31 +200,11 @@
                 android:onClick="updateComplete"/>
 
 
-            <Button
-                android:id="@+id/saveNotes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/actText"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
-                android:text="Save Notes"
-                android:onClick="updateNotes"/>
-
-            <Button
-                android:id="@+id/loadNotes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/actText"
-                android:layout_marginLeft="137dp"
-                android:layout_marginStart="137dp"
-                android:text="Load Saved Notes"
-                android:onClick="getNotes"/>
-
         </RelativeLayout>
-        <!-- Share Text -->
 
     </ScrollView>
 
 
 
 </RelativeLayout>
+

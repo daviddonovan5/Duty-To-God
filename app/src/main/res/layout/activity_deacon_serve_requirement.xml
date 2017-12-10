@@ -16,39 +16,6 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_below="@+id/textView12"
-                android:text="Share with a parent or quorum members some of your experiences serving others. For example, you could talk about how your service has affected you and the people you have served."
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SHARE"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_below="@+id/loadNotes"
-                android:layout_alignRight="@+id/Learn"
-                android:layout_alignEnd="@+id/Learn" />
-
-
-
-            <EditText
-                android:id="@+id/actText"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_alignLeft="@+id/actPrompt"
-                android:layout_alignStart="@+id/actPrompt"
-                android:layout_below="@+id/actPrompt"
-                android:hint="NOTES..."
-                android:textSize="20sp"
-                android:inputType="textMultiLine"/>
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Serve Others"
@@ -80,6 +47,7 @@
                 android:layout_below="@+id/Learn"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
                 android:text="▪ Write down what you learn about serving others from the following scriptures: James 1:27, Mosiah 2:17, and Mosiah 18:8–10. Talk with a parent or quorum leader about the relationship between being a priesthood holder and serving others
 ▪ Discuss with members of your quorum the opportunities you have to serve others (ask your bishop or quorum leaders for ideas). As an Aaronic Priesthood holder, you serve others by assisting your bishop or branch president in “administering . . . temporal things” (D&amp;C 107:68). This may include caring for the poor and needy, cleaning the meetinghouse and grounds, gathering fast offerings, and fulfilling assignments from your quorum president. It could also include service projects you decide to do on your own
 ▪ List some specific things your quorum will do to give service. Also plan several things you will do on your own to give service, including service to members of your family"
@@ -101,18 +69,112 @@
 
             <!-- Act Text -->
             <TextView
-                android:id="@+id/actPrompt"
+                android:id="@+id/ActText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/learn"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
                 android:text="My quorum’s plan to give service:"
                 android:textSize="12sp" />
 
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignLeft="@+id/ActText"
+                android:layout_alignStart="@+id/ActText"
+                android:layout_below="@+id/ActText"
+                android:layout_marginRight="20dp"
+                android:hint="..."
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/saveNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText7"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Save Notes"
+                android:onClick="updateNotes"/>
+
+            <Button
+                android:id="@+id/loadNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText7"
+                android:layout_marginLeft="137dp"
+                android:layout_marginStart="137dp"
+                android:text="Load Saved Notes"
+                android:onClick="getNotes"/>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText7"
+                android:layout_alignStart="@+id/editText7"
+                android:layout_below="@+id/saveNotes"
+                android:text="My personal plan to give service: "
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:hint="..."
+                android:textSize="12sp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/textView10"
+                android:layout_alignLeft="@+id/textView10"
+                android:layout_alignStart="@+id/textView10" />
+
+            <Button
+                android:id="@+id/saveNotes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText9"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Save Notes"
+                android:onClick="updateNotes"/>
+
+            <Button
+                android:id="@+id/loadNotes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText9"
+                android:layout_marginLeft="137dp"
+                android:layout_marginStart="137dp"
+                android:text="Load Saved Notes"
+                android:onClick="getNotes"/>
+
             <!-- Share Title -->
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHARE"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margintop="10dp"
+                android:layout_below="@id/saveNotes1"
+                android:layout_alignRight="@+id/Learn"
+                android:layout_alignEnd="@+id/Learn" />
 
             <!-- Share Text -->
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText9"
+                android:layout_alignStart="@+id/editText9"
+                android:layout_below="@+id/textView12"
+                android:layout_marginRight="20dp"
+                android:text="▪ Share with a parent or quorum members some of your experiences serving others. For example, you could talk about how your service has affected you and the people you have served."
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/markComplete"
@@ -124,30 +186,10 @@
                 android:text="Mark Activity as Complete"
                 android:onClick="updateComplete"/>
 
-            <Button
-                android:id="@+id/saveNotes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/actText"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="20dp"
-                android:text="Save Notes"
-                android:onClick="updateNotes"/>
-
-            <Button
-                android:id="@+id/loadNotes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/actText"
-                android:layout_marginLeft="137dp"
-                android:layout_marginStart="137dp"
-                android:text="Load Saved Notes"
-                android:onClick="getNotes"/>
-
-
         </RelativeLayout>
     </ScrollView>
 
 
 
 </RelativeLayout>
+
