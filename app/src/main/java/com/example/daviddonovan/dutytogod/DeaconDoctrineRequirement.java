@@ -32,7 +32,7 @@ public class DeaconDoctrineRequirement extends AppCompatActivity implements Requ
         String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
         user = rawUserEmail.replace(".", "");
 
-        notesText = findViewById(R.id.actText);
+        notesText = findViewById(R.id.shareInput);
     }
     @Override
     public void updateComplete(View view) {

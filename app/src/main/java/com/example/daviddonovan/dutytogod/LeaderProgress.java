@@ -42,7 +42,7 @@ public class LeaderProgress extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leader_progress);
+        setContentView(R.layout.activity_leader_deacon_progress);
         prayButtonLeader = (RadioButton)findViewById(R.id.prayProgress);
         administerButtonLeader= (RadioButton)findViewById(R.id.administerProgress);
         createButtonLeader= (RadioButton)findViewById(R.id.createProgress);

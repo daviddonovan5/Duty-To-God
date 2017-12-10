@@ -159,7 +159,6 @@
                 android:text="SHARE"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_margintop="10dp"
                 android:layout_below="@id/saveNotes1"
                 android:layout_alignRight="@+id/Learn"
                 android:layout_alignEnd="@+id/Learn" />

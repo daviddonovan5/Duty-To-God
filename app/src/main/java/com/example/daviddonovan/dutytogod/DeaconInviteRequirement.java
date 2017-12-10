@@ -34,7 +34,7 @@ public class DeaconInviteRequirement extends AppCompatActivity implements Requir
         String rawUserEmail = firebaseAuth.getCurrentUser().getEmail();
         user = rawUserEmail.replace(".", "");
 
-        notesText = findViewById(R.id.actText);
+        notesText = findViewById(R.id.shareInput);
     }
 
     @Override
