@@ -16,16 +16,15 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Physical Health"
-                android:id="@+id/title"
-                android:textSize="30sp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Physical Health"
                 android:textAlignment="center"
-                android:layout_marginTop="5dp"/>
-
+                android:textSize="30sp" />
 
 
             <!-- Learn Text -->
@@ -38,7 +37,6 @@
                 android:layout_marginTop="10dp"
                 android:text="After you have begun working on your plans in “Spiritual Strength” and “Priesthood Duties,” create a project based on the standards in the “Physical Health” section of For the Strength of Youth. Use the steps on the following pages as a guide. Your project should be challenging and should include a signifi cant time commitment. It should be based on your own needs and interests. It should establish a pattern that will help you build and maintain physical health throughout your life."
                 android:textSize="20sp" />
-
 
 
             <!-- Act Title -->
@@ -62,8 +60,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Read “Physical Health” in For the Strength of Youth, and study the following scriptures: Doctrine and Covenants 88:124, Doctrine and Covenants 89, and 1 Corinthians 3:16–17. Identify principles that relate to physical health. Write down your answers to the following questions, and share them with a parent, a priesthood leader, or quorum members:
-                1. Why is it important to be physically healthy? How will being physically healthy help you fulfill your priesthood duties (including as a missionary, as a father, and in your service to others)?
-                2. What are the spiritual benefits of being physically healthy? What are the spiritual consequences of not caring for our physical bodies properly? "
+                \n1. Why is it important to be physically healthy? How will being physically healthy help you fulfill your priesthood duties (including as a missionary, as a father, and in your service to others)?
+                \n2. What are the spiritual benefits of being physically healthy? What are the spiritual consequences of not caring for our physical bodies properly? "
                 android:textSize="20sp" />
 
             <!-- Share Title -->
@@ -98,8 +96,8 @@
                 android:layout_alignStart="@+id/textAct"
                 android:layout_below="@+id/ShareText"
                 android:hint="NOTES..."
-                android:textSize="20sp"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/markComplete"
@@ -108,8 +106,8 @@
                 android:layout_below="@id/loadNotes"
                 android:layout_marginLeft="40dp"
                 android:layout_marginStart="80dp"
-                android:text="Mark Activity as Complete"
-                android:onClick="updateComplete"/>
+                android:onClick="updateComplete"
+                android:text="Mark Activity as Complete" />
 
             <Button
                 android:id="@+id/saveNotes"
@@ -118,18 +116,18 @@
                 android:layout_below="@id/actText"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
-                android:text="Save Notes"
-                android:onClick="updateNotes"/>
+                android:onClick="updateNotes"
+                android:text="Save Notes" />
 
             <Button
                 android:id="@+id/loadNotes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/actText"
-                android:layout_marginLeft="137dp"
-                android:layout_marginStart="137dp"
-                android:text="Load Saved Notes"
-                android:onClick="getNotes"/>
+                android:layout_marginLeft="187dp"
+                android:layout_marginStart="187dp"
+                android:onClick="getNotes"
+                android:text="Load Saved Notes" />
 
         </RelativeLayout>
     </ScrollView>

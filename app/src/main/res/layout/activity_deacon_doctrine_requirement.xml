@@ -88,7 +88,7 @@
                 android:layout_alignStart="@+id/Learn"
                 android:layout_below="@+id/Learn"
                 android:text="Read Doctrine and Covenants 11:21. \nWhat promises does the Lord give to those who study His word? You will need a basic understanding and a testimony of gospel truths to fulfill your duties now as a priesthood holder and in the future as a full-time missionary and as a husband and father.\n
-                \nLook at the list of doctrinal topics and choose four or more that you would like to learn about. \nOne of these should be “The Priesthood and Priesthood Keys.” You can use the scriptures (including the Topical Guide), True to the Faith, Preach My Gospel, and the words of latter-day prophets to learn about these topics.
+                \nLook at the list of doctrinal topics and choose four or more that you would like to learn about. \n\nOne of these should be “The Priesthood and Priesthood Keys.” You can use the scriptures (including the Topical Guide), True to the Faith, Preach My Gospel, and the words of latter-day prophets to learn about these topics.
                 \n\nFor each topic you study, create a simple outline. It could include: (1) a definition of the topic, (2) teachings and examples from the scriptures and your own life, and (3) your thoughts and feelings about why this topic is important. For examples of outlines, see Preach My Gospel (chapters 2 and 3) or visit DutytoGod.lds.org"
                 android:textSize="20sp" />
 

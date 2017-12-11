@@ -47,11 +47,11 @@
                 android:layout_below="@+id/Learn"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:text="▪ Carefully study Joshua 1:8; 1 Nephi 15:23–24; 2 Nephi 32:3; Alma 17:2–3; and D and C 21:4–6. As you study, make a list of words and phrases that describe:
-                1. How you should approach your study of the scriptures and words of the living prophets.
-                2. Blessings that will come as you study the scriptures and words of the living prophets.
-                Share your list with your parents, priesthood leaders, or other quorum members. Discuss specific blessings you have received from following counsel the Lord has given in the scriptures and through living prophets.
-            ▪ On the next page, write your plans to begin or strengthen a habit of regular prayer and scripture study. For example, you could plan to study the Book of Mormon for a specifi c amount of time each day. Your scripture study could include the words of the living prophets in the conference issues of the Ensign or Liahona."
+                android:text="Carefully study Joshua 1:8; 1 Nephi 15:23–24; 2 Nephi 32:3; Alma 17:2–3; and D and C 21:4–6. As you study, make a list of words and phrases that describe:
+                \n1. How you should approach your study of the scriptures and words of the living prophets.
+                \n2. Blessings that will come as you study the scriptures and words of the living prophets.
+                \nShare your list with your parents, priesthood leaders, or other quorum members. Discuss specific blessings you have received from following counsel the Lord has given in the scriptures and through living prophets.
+            \nWrite your plans to begin or strengthen a habit of regular prayer and scripture study. For example, you could plan to study the Book of Mormon for a specific amount of time each day. Your scripture study could include the words of the living prophets in the conference issues of the Ensign or Liahona."
                 android:textSize="20sp" />
 
 
@@ -76,7 +76,7 @@
                 android:layout_below="@+id/learn"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:text="My plan for developing a habit of regular prayer and scripture study: "
+                android:text="My plan for developing a habit of regular prayer and scripture study: \n"
                 android:textSize="20sp" />
 
             <!-- Share Title -->
@@ -87,7 +87,7 @@
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/loadNotes"
+                android:layout_below="@+id/actPrompt"
                 android:layout_marginTop= "8dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -99,14 +99,14 @@
                 android:layout_below="@+id/Share"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:text="▪ Share what you are learning from your scripture study. For example, you could share with your family, with friends, or in quorum meetings. This will strengthen your testimony of what you’re learning and help you learn how to teach the gospel. It will also strengthen the testimony of others."
+                android:text="Share what you are learning from your scripture study. For example, you could share with your family, with friends, or in quorum meetings. This will strengthen your testimony of what you’re learning and help you learn how to teach the gospel. It will also strengthen the testimony of others."
                 android:textSize="20sp" />
 
             <Button
                 android:id="@+id/markComplete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ShareText"
+                android:layout_below="@id/loadNotes"
                 android:layout_marginLeft="40dp"
                 android:layout_marginStart="80dp"
                 android:text="Mark Activity as Complete"
@@ -127,8 +127,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/actText"
-                android:layout_marginLeft="137dp"
-                android:layout_marginStart="137dp"
+                android:layout_marginLeft="187dp"
+                android:layout_marginStart="187dp"
                 android:text="Load Saved Notes"
                 android:onClick="getNotes"/>
 
@@ -138,7 +138,7 @@
                 android:layout_height="100dp"
                 android:layout_alignLeft="@+id/textAct"
                 android:layout_alignStart="@+id/textAct"
-                android:layout_below="@+id/actPrompt"
+                android:layout_below="@+id/ShareText"
                 android:hint="NOTES..."
                 android:textSize="20sp"
                 android:inputType="textMultiLine"/>

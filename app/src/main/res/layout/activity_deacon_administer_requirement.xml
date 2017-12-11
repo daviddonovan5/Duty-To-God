@@ -22,7 +22,7 @@
                 android:layout_alignLeft="@+id/textView8"
                 android:layout_alignStart="@+id/textView8"
                 android:layout_below="@+id/textView8"
-                android:text="After following through with your plan, discuss with members of your quorum how your experiences with the sacrament have helped you become more reverent. \n"
+                android:text="After following through with your plan, discuss with members of your quorum how your experiences with the sacrament have helped you become more reverent.\n"
                 android:textSize="20sp" />
 
 
@@ -43,8 +43,9 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:layout_below="@+id/loadNotes"
+                android:layout_alignLeft="@+id/learn"
+                android:layout_alignStart="@+id/learn"
+                android:layout_below="@+id/textAct"
                 android:text="SHARE"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -69,12 +70,11 @@
                 android:layout_alignLeft="@+id/Learn"
                 android:layout_alignStart="@+id/Learn"
                 android:layout_below="@+id/Learn"
-                android:text="Read Doctrine and Covenants 20:76–79. \n What do the sacramental bread and water represent? \n\nRead Luke 22:19–20 and 3 Nephi 18:1–11. \nWhom do you represent when you pass the sacrament? \n
-\n\nAsk your parents or your quorum leaders the following questions, and write their answers: \n
-    1. What does the ordinance of the sacrament mean to you? \n
-    2. What can I do as a deacon to help you have a meaningful
-       experience with the sacrament? \n \n
-After counseling with your quorum, write what you will do to pass the sacrament in a way that shows reverence for the Savior and His Atonement and encourages others to show the same reverence. \n Also write what you will do to have a more meaningful experience when you partake of the sacrament.\n"
+                android:text="Read Doctrine and Covenants 20:76–79.\nWhat do the sacramental bread and water represent? \n\nRead Luke 22:19–20 and 3 Nephi 18:1–11. \nWhom do you represent when you pass the sacrament?
+\n\nAsk your parents or your quorum leaders the following questions, and write their answers:
+\n1. What does the ordinance of the sacrament mean to you?
+\n2. What can I do as a deacon to help you have a meaningful experience with the sacrament? \n \n
+After counseling with your quorum, write what you will do to pass the sacrament in a way that shows reverence for the Savior and His Atonement and encourages others to show the same reverence. \nAlso write what you will do to have a more meaningful experience when you partake of the sacrament.\n"
                 android:textSize="20sp" />
 
 
@@ -98,7 +98,7 @@ After counseling with your quorum, write what you will do to pass the sacrament 
                 android:layout_alignLeft="@+id/learn"
                 android:layout_alignStart="@+id/learn"
                 android:layout_below="@+id/learn"
-                android:text="Several things I will do to show reverence when I pass the sacrament and to encourage others to show the same reverence: \n\n What I will do to have a more meaningful experience when I partake of the sacrament: \n"
+                android:text="Several things I will do to show reverence when I pass the sacrament and to encourage others to show the same reverence: \n\nWhat I will do to have a more meaningful experience when I partake of the sacrament: \n"
                 android:textSize="20sp" />
 
             <!-- Share Title -->
@@ -111,7 +111,7 @@ After counseling with your quorum, write what you will do to pass the sacrament 
                 android:layout_height="100dp"
                 android:layout_alignLeft="@+id/textAct"
                 android:layout_alignStart="@+id/textAct"
-                android:layout_below="@+id/textAct"
+                android:layout_below="@+id/textView9"
                 android:hint="Notes.."
                 android:textSize="20sp"
                 android:inputType="textMultiLine"/>
@@ -131,8 +131,8 @@ After counseling with your quorum, write what you will do to pass the sacrament 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/actText"
-            android:layout_marginLeft="137dp"
-            android:layout_marginStart="137dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginStart="187dp"
             android:text="Load Saved Notes"
             android:onClick="getNotes"/>
 
@@ -141,7 +141,7 @@ After counseling with your quorum, write what you will do to pass the sacrament 
                 android:id="@+id/markComplete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView9"
+                android:layout_below="@id/loadNotes"
                 android:layout_marginLeft="20dp"
                 android:layout_marginStart="20dp"
                 android:text="Mark Activity as Complete"

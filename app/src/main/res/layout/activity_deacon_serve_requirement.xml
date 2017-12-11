@@ -19,10 +19,11 @@
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:layout_alignLeft="@+id/actText"
+                android:layout_alignStart="@+id/actText"
                 android:layout_below="@+id/textView12"
-                android:text="Share with a parent or quorum members some of your experiences serving others. For example, you could talk about how your service has affected you and the people you have served."
-                android:textSize="12sp" />
+                android:text="Share with a parent or quorum members some of your experiences serving others. For example, you could talk about how your service has affected you and the people you have served.\n"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -31,7 +32,7 @@
                 android:text="SHARE"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_below="@+id/loadNotes"
+                android:layout_below="@+id/actPrompt"
                 android:layout_alignRight="@+id/Learn"
                 android:layout_alignEnd="@+id/Learn" />
 
@@ -43,7 +44,7 @@
                 android:layout_height="100dp"
                 android:layout_alignLeft="@+id/actPrompt"
                 android:layout_alignStart="@+id/actPrompt"
-                android:layout_below="@+id/actPrompt"
+                android:layout_below="@+id/textView15"
                 android:hint="NOTES..."
                 android:textSize="20sp"
                 android:inputType="textMultiLine"/>
@@ -80,10 +81,10 @@
                 android:layout_below="@+id/Learn"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:text="▪ Write down what you learn about serving others from the following scriptures: James 1:27, Mosiah 2:17, and Mosiah 18:8–10. Talk with a parent or quorum leader about the relationship between being a priesthood holder and serving others
-▪ Discuss with members of your quorum the opportunities you have to serve others (ask your bishop or quorum leaders for ideas). As an Aaronic Priesthood holder, you serve others by assisting your bishop or branch president in “administering . . . temporal things” (D&amp;C 107:68). This may include caring for the poor and needy, cleaning the meetinghouse and grounds, gathering fast offerings, and fulfilling assignments from your quorum president. It could also include service projects you decide to do on your own
-▪ List some specific things your quorum will do to give service. Also plan several things you will do on your own to give service, including service to members of your family"
-                android:textSize="12sp" />
+                android:text="Write down what you learn about serving others from the following scriptures: James 1:27, Mosiah 2:17, and Mosiah 18:8–10. \nTalk with a parent or quorum leader about the relationship between being a priesthood holder and serving others
+\nDiscuss with members of your quorum the opportunities you have to serve others (ask your bishop or quorum leaders for ideas). As an Aaronic Priesthood holder, you serve others by assisting your bishop or branch president in “administering . . . temporal things” (D&amp;C 107:68). This may include caring for the poor and needy, cleaning the meetinghouse and grounds, gathering fast offerings, and fulfilling assignments from your quorum president. It could also include service projects you decide to do on your own
+\nList some specific things your quorum will do to give service. Also plan several things you will do on your own to give service, including service to members of your family"
+                android:textSize="20sp" />
 
 
 
@@ -108,7 +109,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="My quorum’s plan to give service:"
-                android:textSize="12sp" />
+                android:textSize="20dp" />
 
             <!-- Share Title -->
 
@@ -118,7 +119,7 @@
                 android:id="@+id/markComplete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView15"
+                android:layout_below="@id/loadNotes"
                 android:layout_marginLeft="40dp"
                 android:layout_marginStart="80dp"
                 android:text="Mark Activity as Complete"
@@ -139,8 +140,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/actText"
-                android:layout_marginLeft="137dp"
-                android:layout_marginStart="137dp"
+                android:layout_marginLeft="187dp"
+                android:layout_marginStart="187dp"
                 android:text="Load Saved Notes"
                 android:onClick="getNotes"/>
 

@@ -48,11 +48,11 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Read the section titled “Repentance” in For the Strength of Youth, and write your answers to the following questions in a notebook or journal:
-                1. What do you learn about the Atonement and repentance from this section?
-                2. How does repentance help you grow spiritually?
-                3. What is the relationship between repentance, the Atonement, and personal worthiness?
-                Discuss your answers with your parents or quorum members. Discuss how repentance will help you prepare to enter the temple and participate in sacred ordinances.
-           ▪ Choose at least three other sections from For the Strength of Youth that will help you live worthily. Study the standards in these sections, and write what you will do to live these standards and to help others do the same."
+                \n1. What do you learn about the Atonement and repentance from this section?
+                \n2. How does repentance help you grow spiritually?
+                \n3. What is the relationship between repentance, the Atonement, and personal worthiness?
+               \nDiscuss your answers with your parents or quorum members. Discuss how repentance will help you prepare to enter the temple and participate in sacred ordinances.
+           \n\nChoose at least three other sections from For the Strength of Youth that will help you live worthily. Study the standards in these sections, and write what you will do to live these standards and to help others do the same."
                 android:textSize="20sp" />
 
 
@@ -77,8 +77,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Sections from For the Strength of Youth I will study:
-
-                Specific things I will do to live these standards and help others do the same: "
+               \nSpecific things I will do to live these standards and help others do the same: "
                 android:textSize="20sp" />
 
             <!-- Share Title -->
@@ -86,7 +85,7 @@
                 android:id="@+id/Share"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/loadNotes"
+                android:layout_below="@+id/actPrompt"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:text="SHARE"
@@ -101,14 +100,14 @@
                 android:layout_below="@+id/Share"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:text="After studying and applying these standards, share with your parents or quorum members what you are learning, how it is infl uencing your life, and the kind of person you are becoming."
+                android:text="After studying and applying these standards, share with your parents or quorum members what you are learning, how it is influencing your life, and the kind of person you are becoming.\n"
                 android:textSize="20sp" />
 
             <Button
                 android:id="@+id/markComplete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ShareText"
+                android:layout_below="@id/loadNotes"
                 android:layout_marginLeft="40dp"
                 android:layout_marginStart="80dp"
                 android:text="Mark Activity as Complete"
@@ -129,8 +128,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/actText"
-                android:layout_marginLeft="137dp"
-                android:layout_marginStart="137dp"
+                android:layout_marginLeft="187dp"
+                android:layout_marginStart="187dp"
                 android:text="Load Saved Notes"
                 android:onClick="getNotes"/>
 
@@ -140,7 +139,7 @@
                 android:layout_height="100dp"
                 android:layout_alignLeft="@+id/textAct"
                 android:layout_alignStart="@+id/textAct"
-                android:layout_below="@+id/actPrompt"
+                android:layout_below="@+id/ShareText"
                 android:hint="NOTES..."
                 android:textSize="20sp"
                 android:inputType="textMultiLine"/>
