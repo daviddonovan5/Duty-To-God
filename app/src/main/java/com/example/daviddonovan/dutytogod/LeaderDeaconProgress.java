@@ -91,8 +91,6 @@ public class LeaderDeaconProgress extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.child("users").hasChild(user)){
-                    Toast.makeText(LeaderDeaconProgress.this, "The user exsists", Toast.LENGTH_SHORT).show();
-                    // continue
 
 
                     DatabaseReference prayRef  = ref.child("users").child(user).child("requirements").child("prayRequirement");
