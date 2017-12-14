@@ -67,7 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 public void onDataChange(DataSnapshot dataSnapshot) {
 
                     String progress = dataSnapshot.getValue(String.class);
-                    if (progress.matches("Leader")) {
+                    if (progress == null){
+                        startActivity(new Intent(getApplicationContext(), Progress.class));
+                    }
+                    else if (progress.matches("Leader")) {
                         Intent requirementIntent = new Intent(getApplicationContext(), ListOfBoys.class);
                         startActivity(requirementIntent);
                     }
